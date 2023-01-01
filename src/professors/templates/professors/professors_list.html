@@ -1,0 +1,22 @@
+{% extends 'professors/base.html' %}
+
+{% block content %}
+{% for professor in professors %}
+<div class="card">
+    <h1 class="card-title">{{ professor.name }}</h1>
+    <p class="card-text">{{ professor.personal_information }}</p>
+    <h2 class="card-subtitle mb-2 text-muted">Education</h2>
+    <p class="card-text">{{ professor.education }}</p>
+    <h2 class="card-subtitle mb-2 text-muted">Work and Related Experience</h2>
+    <p class="card-text">{{ professor.work_and_related_experience }}</p>
+    <h2 class="card-subtitle mb-2 text-muted">Awards and Honors</h2>
+    <p class="card-text">{{ professor.awards_and_honors }}</p>
+    <h2 class="card-subtitle mb-2 text-muted">Activities/Hobbies</h2>
+    <p class="card-text">{{ professor.activities_hobbies }}</p>
+    <h2 class="card-subtitle mb-2 text-muted">Skills</h2>
+    <p class="card-text">{{ professor.skills }}</p>
+    <p class="card-text"><small class="text-muted">Posted on {{ professor.date_posted|date:"F d, Y"  }}</small></p>
+</div>
+{% endfor %}
+
+{% endblock content %}

@@ -10,4 +10,7 @@ class Professor(models.Model):
     activities_hobbies = models.TextField()
     skills = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.name
     
