@@ -1,0 +1,22 @@
+.card {
+    margin: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card h1 {
+    font-size: 24px;
+    margin: 20px;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 20px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 20px;
+}
