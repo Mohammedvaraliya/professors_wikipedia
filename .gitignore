@@ -1,0 +1,4 @@
+professors_venv/
+__pycache__/
+*.pyc
+django_shell_commands.txt
