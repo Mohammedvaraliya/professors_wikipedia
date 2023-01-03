@@ -16,14 +16,9 @@ class ProfessorsListView(ListView):
     context_object_name = 'professors'
 
 
-class ProfessorDetailView(DetailView):
-    model = Professor
-    template_name = 'professors/professor_detail.html'
-    context_object_name = 'professor'
-
 class ProfessorSearchView(ListView):
     model = Professor
-    template_name = 'professors/professor_search.html'
+    template_name = 'professors/professors_list.html'
     context_object_name = 'professors'
 
     def get_queryset(self):
@@ -31,3 +26,9 @@ class ProfessorSearchView(ListView):
         if search_term:
             return Professor.objects.filter(name__icontains=search_term)
         return Professor.objects.all()
+
+
+class ProfessorDetailView(DetailView):
+    model = Professor
+    template_name = 'professors/professor_detail.html'
+    context_object_name = 'professor'
