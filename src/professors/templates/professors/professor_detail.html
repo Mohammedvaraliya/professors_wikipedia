@@ -3,6 +3,7 @@
 {% block content %}
 <div class="card">
     <h1 class="card-title">{{ professor.name }}</h1>
+    <img class="rounded-4 mx-auto d-block" src="{{ professor.image.url }}" alt="{{ professor.name }}" width="250" height="250">
     <p class="card-text">{{ professor.personal_information }}</p>
     <h2 class="card-subtitle mb-2 text-muted">Education</h2>
     <p class="card-text">{{ professor.education }}</p>

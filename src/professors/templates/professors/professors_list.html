@@ -7,7 +7,7 @@
         <div class="col-md-4 mb-4">
           <div class="card h-100">
             <h1 class="card-title text-center">{{ professor.name }}</h1>
-            <p class="card-text">{{ professor.personal_information }}</p>
+            <p class="card-text">{{ professor.personal_information|slice:":200" }}...</p>
             <div class='mx-auto'>
             <a href="{% url 'professor-detail' professor.id %}" class="btn btn-primary btn-block mt-3">View Profile</a>
         </div>
