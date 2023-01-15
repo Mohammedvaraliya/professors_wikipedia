@@ -10,6 +10,8 @@ class Professor(models.Model):
     activities_hobbies = models.TextField()
     skills = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to='professor', blank=True, null=True)
+
 
     def __str__(self):
         return self.name
